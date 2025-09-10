@@ -144,7 +144,8 @@ function Sidebar({
       </Heading>
       <Text fontSize="sm" mb={1.5}>
         <strong>Rustpad</strong> é um editor de texto colaborativo de código aberto,
-        baseado no algoritmo de <em>transformação operacional</em>.
+        baseado no algoritmo de <em>transformação operacional</em>
+        e modificado para facilitar <strong>as aulas de MQA</strong>.
       </Text>
       <Text fontSize="sm" mb={1.5}>
         Compartilhe um link deste documento com outras pessoas e elas poderão editar
