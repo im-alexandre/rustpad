@@ -20,6 +20,7 @@ RUN npm ci
 COPY . .
 ARG GITHUB_SHA
 ENV VITE_SHA=${GITHUB_SHA}
+ENV VITE_DEFAULT_DOC="MQA"
 RUN npm run check
 RUN npm run build
 
