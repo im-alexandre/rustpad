@@ -1,0 +1,19 @@
+version: "3.9"
+services:
+  rustpad:
+    build: .
+    image: rustpad-fork:dev
+    container_name: rustpad
+    environment:
+      # Porta do servidor
+      - PORT=3030
+      # Persistência do conteúdo
+      - SQLITE_URI=sqlite:///data/rustpad.db
+      # Expiração dos documentos (em dias)
+      - EXPIRY_DAYS=30
+      # Documento padrão (frontend)
+      - VITE_DEFAULT_DOC=documento
+      # Linguagem padrão do editor
+      - VITE_DEFAULT_LANG=r
+    volumes:
+      - ./data:/data

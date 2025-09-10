@@ -173,19 +173,6 @@ function Sidebar({
           github.com/ekzhang/rustpad
         </Link>.
       </Text>
-
-      <Button
-        size="sm"
-        colorScheme={darkMode ? "whiteAlpha" : "blackAlpha"}
-        borderColor={darkMode ? "purple.400" : "purple.600"}
-        color={darkMode ? "purple.400" : "purple.600"}
-        variant="outline"
-        leftIcon={<VscRepo />}
-        mt={1}
-        onClick={onLoadSample}
-      >
-        Leia o código!
-      </Button>
     </Container>
   );
 }
