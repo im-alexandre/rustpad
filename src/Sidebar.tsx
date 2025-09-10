@@ -140,27 +140,38 @@ function Sidebar({
       </Stack>
 
       <Heading mt={4} mb={1.5} size="sm">
-        About
+        Sobre
       </Heading>
       <Text fontSize="sm" mb={1.5}>
-        <strong>Rustpad</strong> is an open-source collaborative text editor
-        based on the <em>operational transformation</em> algorithm.
+        <strong>Rustpad</strong> é um editor de texto colaborativo de código aberto,
+        baseado no algoritmo de <em>transformação operacional</em>.
       </Text>
       <Text fontSize="sm" mb={1.5}>
-        Share a link to this pad with others, and they can edit from their
-        browser while seeing your changes in real time.
+        Compartilhe um link deste documento com outras pessoas e elas poderão editar
+        a partir do navegador, vendo suas alterações em tempo real.
       </Text>
       <Text fontSize="sm" mb={1.5}>
-        Built using Rust and TypeScript. See the{" "}
+        Desenvolvido em Rust e TypeScript. Veja o{" "}
+        <Link
+          color="blue.600"
+          fontWeight="semibold"
+          href="https://github.com/im-alexandre/rustpad"
+          isExternal
+        >
+          repositório no GitHub
+        </Link>{" "}
+        para mais detalhes.
+      </Text>
+      <Text fontSize="sm" mb={1.5}>
+        Este projeto é um fork de{" "}
         <Link
           color="blue.600"
           fontWeight="semibold"
           href="https://github.com/ekzhang/rustpad"
           isExternal
         >
-          GitHub repository
-        </Link>{" "}
-        for details.
+          github.com/ekzhang/rustpad
+        </Link>.
       </Text>
 
       <Button
@@ -173,7 +184,7 @@ function Sidebar({
         mt={1}
         onClick={onLoadSample}
       >
-        Read the code
+        Leia o código!
       </Button>
     </Container>
   );
