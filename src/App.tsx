@@ -14,6 +14,15 @@ import languages from "./languages.json";
 import Rustpad, { UserInfo } from "./rustpad";
 import useHash from "./useHash";
 
+// Força sempre o mesmo documento ao abrir o site
+const DEFAULT_DOC = "mqa2"
+
+if (window.location.hash !== `#${DEFAULT_DOC}`) {
+  // Não usa pushState para evitar “quebrar” o botão voltar
+  window.location.replace(`#${DEFAULT_DOC}`);
+}
+
+
 function getWsUri(id: string) {
   let url = new URL(`api/socket/${id}`, window.location.href);
   url.protocol = url.protocol == "https:" ? "wss:" : "ws:";
