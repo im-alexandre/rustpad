@@ -15,5 +15,3 @@ services:
       - VITE_DEFAULT_DOC=documento
       # Linguagem padrão do editor
       - VITE_DEFAULT_LANG=r
-    volumes:
-      - ./data:/data
