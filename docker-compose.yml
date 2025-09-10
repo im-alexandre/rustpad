@@ -10,7 +10,7 @@ services:
       - VITE_DEFAULT_DOC=documento
       - VITE_DEFAULT_LANG=r
     volumes:
-      - ./rustpad_data:/data
+      - rustpad_data:/data
     ports:
       - "3030:3030"
 volumes:
