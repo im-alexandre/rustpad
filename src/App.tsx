@@ -15,7 +15,8 @@ import Rustpad, { UserInfo } from "./rustpad";
 import useHash from "./useHash";
 
 // Força sempre o mesmo documento ao abrir o site
-const DEFAULT_DOC = "mqa2"
+const DEFAULT_DOC =
+  (import.meta as any)?.env?.VITE_DEFAULT_DOC || 'documento';
 
 if (window.location.hash !== `#${DEFAULT_DOC}`) {
   // Não usa pushState para evitar “quebrar” o botão voltar
@@ -39,7 +40,7 @@ function generateHue() {
 
 function App() {
   const toast = useToast();
-  const [language, setLanguage] = useState("plaintext");
+  const [language, setLanguage] = useState("r");
   const [connection, setConnection] = useState<
     "connected" | "disconnected" | "desynchronized"
   >("disconnected");
