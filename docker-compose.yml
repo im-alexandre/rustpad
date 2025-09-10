@@ -1,6 +1,7 @@
 version: "3.9"
 services:
   rustpad:
+    build: .
     image: alexandre07/rustpad-default:latest
     container_name: rustpad
     environment:
